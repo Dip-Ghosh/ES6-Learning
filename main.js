@@ -39,3 +39,54 @@ let list = document.querySelector('.user_list');
      list.insertAdjacentHTML('beforeEnd',template);
  }
  addUsers('Dip ','Ghosh');
+
+//forEach
+const artists = ['singer','actor','dramer'];
+artists.forEach(function(item){
+
+    console.log(item);
+
+});
+let purchases = [
+    { quantity : 2, amount : 200 },
+    { quantity : 3, amount : 300 },
+    { quantity : 4, amount : 500}
+]
+let totalAmount = 0;
+purchases.forEach(function(item){
+    totalAmount += item.amount * item.quantity;
+})
+console.log(totalAmount);
+
+//exercise
+ var products = [
+    { name : 'iphone', price : 200 },
+    { name : 'samsung', price : 70 },
+    { name : 'nokia', price : 150 },
+    { name : 'blackbery', price : 98 },
+    { name : 'windows Phone', price : 10 }
+ ];
+
+
+ let list = document.querySelector('.product_list');
+ 
+ products.forEach(function(item){
+
+   
+    function discount(){
+        if(item.price<100){
+        return `<span>On sale !!</span></div>`
+    }
+    else{
+        return `<span> </span></div>`
+    }
+    }
+    let  template =  `
+    <div class="product">
+       <h1><strong> ${item.name}</strong </h1>
+       ${discount()}
+       <strong>Price:$${item.price}</strong> 
+      </div>
+    `;
+    list.insertAdjacentHTML('beforeEnd',template);
+ })
