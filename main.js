@@ -1,15 +1,15 @@
- //concept of let and conts
+//  //concept of let and conts
  let divs = document.getElementsByTagName('div');
  console.log(divs);
 for(let i = 0; i < divs.length; i++)
 {
     divs[i].addEventListener('click',function(){
         console.log('you have clicked div #'+ i);
-        
+
     });
 }
 
-//string literals
+// //string literals
   function retrunEmployee()
   {
       const name = "Dip";
@@ -26,7 +26,7 @@ for(let i = 0; i < divs.length; i++)
   }
   console.log(`name is ${users.name} and age is ${users.age}`);
 
-//user list
+// //user list
 let list = document.querySelector('.user_list');
  function addUsers(name,lastName)
  {
@@ -58,7 +58,7 @@ purchases.forEach(function(item){
 })
 console.log(totalAmount);
 
-//exercise
+// //exercise
  var products = [
     { name : 'iphone', price : 200 },
     { name : 'samsung', price : 70 },
@@ -69,10 +69,10 @@ console.log(totalAmount);
 
 
  let list = document.querySelector('.product_list');
- 
+
  products.forEach(function(item){
 
-   
+
     function discount(){
         if(item.price<100){
         return `<span>On sale !!</span></div>`
@@ -85,8 +85,32 @@ console.log(totalAmount);
     <div class="product">
        <h1><strong> ${item.name}</strong </h1>
        ${discount()}
-       <strong>Price:$${item.price}</strong> 
+       <strong>Price:$${item.price}</strong>
       </div>
     `;
     list.insertAdjacentHTML('beforeEnd',template);
  })
+
+//map
+
+const arr = [2,3,4,5,7,8,9,10];
+const number = arr.map(function (arr) {
+    return arr;
+
+})
+console.log(number);
+const users = [
+    {name:'Dip',width:200,height:300},
+    {name:'mahi',width:400,height:500},
+    {name:'saiful',width:700,height:800},
+
+    ];
+const value = users.map(function (user) {
+    return user;
+
+})
+value.forEach(function (item) {
+  console.log(`name is ${item.name} and width is ${item.width} and height is ${item.height}`)
+
+})
+
