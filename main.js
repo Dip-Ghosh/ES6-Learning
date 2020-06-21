@@ -113,4 +113,16 @@ value.forEach(function (item) {
   console.log(`name is ${item.name} and width is ${item.width} and height is ${item.height}`)
 
 })
+//fliter
+const users = [
+    {name:'Dip',width:200,height:300},
+    {name:'mahi',width:400,height:500},
+    {name:'saiful',width:700,height:800},
+    {name:'saiful',width:20,height:800},
 
+];
+
+const list = users.filter(function(user){
+    return user.name === 'saiful';
+})
+console.log(list)
